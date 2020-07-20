@@ -5,16 +5,59 @@ const covidApi = require("../api_modules/covidapi");
 
 export default class Total extends Component
 {
+    constructor(props)
+    {
+        super(props);
+        this.state = {
+            totalCases : "0"
+        };
+    }
 
+    componentDidMount()
+    {
+        (
+            async ()=> {
+                await covidApi.getTotalCases()
+                .then((data)=> {
+                    this.setState({totalCases : data});
+                });
+            }
+        )();
+    }
     render()
     {
         return (
-            <Text style= {styles.titleStyle}>
-                COVID-19 Cases{"\n"}
-                <Text style = {styles.numberStyle}>
-                    {covidApi.getTotalCases()}
+            <View style={styles.container}>
+                <Text style= {styles.titleStyle}>
+                    COVID-19 Cases{"\n"}
                 </Text>
-          </Text>
+                <Text style={styles.numberStyle}>
+                    {this.state.totalCases}
+                </Text>
+            </View>
         );
     }
 }
+
+const styles = StyleSheet.create({
+    titleStyle : {
+      fontSize : "50px",
+    },
+  
+    numberStyle : {
+        fontWeight : "bold",
+        color : "grey",
+        fontSize : "50px",
+        margin : "-50px",
+        position : "relative",
+        top : "150%"
+    },
+  
+    container: {
+        flex: 1,
+        backgroundColor: '#fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+  });
+  

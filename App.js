@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import { StyleSheet, Text, View} from 'react-native';
 import {Button} from 'react-native-elements';
-import Deaths from "./react_modules/Deaths"
+import Deaths from "./react_modules/Deaths";
+
+import Total from "./react_modules/Total";
 
 const covidApi = require("./api_modules/covidapi");
 
@@ -30,12 +32,9 @@ export default class App extends Component {
   {
     return(
       <View>
-        <View style={styles.container}>
-          
-        </View>
-        <View style ={ styles.box }>
-        </View>
-        <Button onPress={async ()=> await this.display()}></Button>
+        <Total></Total>
+        
+        
       </View>
       
     );
