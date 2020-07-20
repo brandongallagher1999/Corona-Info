@@ -1,7 +1,8 @@
-import { StyleSheet, Text, View} from 'react-native';
+import { Text, View} from 'react-native';
 import React, {Component} from 'react';
 
 const covidApi = require("../api_modules/covidapi");
+import styles from "./styles";
 
 export default class Total extends Component
 {
@@ -24,6 +25,7 @@ export default class Total extends Component
             }
         )();
     }
+
     render()
     {
         return (
@@ -38,26 +40,3 @@ export default class Total extends Component
         );
     }
 }
-
-const styles = StyleSheet.create({
-    titleStyle : {
-      fontSize : "50px",
-    },
-  
-    numberStyle : {
-        fontWeight : "bold",
-        color : "grey",
-        fontSize : "50px",
-        margin : "-50px",
-        position : "relative",
-        top : "150%"
-    },
-  
-    container: {
-        flex: 1,
-        backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
-    },
-  });
-  

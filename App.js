@@ -1,21 +1,13 @@
 import React, {Component} from 'react';
-import { StyleSheet, Text, View} from 'react-native';
-import {Button} from 'react-native-elements';
+import { ScrollView} from "react-native";
 import Deaths from "./react_modules/Deaths";
-
+//import styles from "./react_modules/styles";
 import Total from "./react_modules/Total";
-
+import Recovered from "./react_modules/Recovered";
 const covidApi = require("./api_modules/covidapi");
 
-export default class App extends Component {
 
-  constructor(props)
-  {
-    super(props);
-    this.state = {
-      total : "0"
-    };
-  }
+export default class App extends Component {
 
   async display()
   {
@@ -31,44 +23,13 @@ export default class App extends Component {
   render()
   {
     return(
-      <View>
+      <ScrollView>
         <Total></Total>
-        
-        
-      </View>
+        <Deaths></Deaths>
+        <Recovered></Recovered>
+      </ScrollView>
       
     );
   }
   
 }
-
-const styles = StyleSheet.create({
-
-  main : {
-
-  },
-
-  titleStyle : {
-    fontSize : "50px",
-  },
-
-  numberStyle : {
-    margin : "-50px",
-    position : "relative",
-    left : "50%"
-  },
-
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-
-  box: {
-    width : "100px",
-    height : "100px",
-    borderColor : "red",
-    borderWidth: "10px"
-  }
-});

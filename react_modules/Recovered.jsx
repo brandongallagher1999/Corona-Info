@@ -4,13 +4,13 @@ import React, {Component} from 'react';
 const covidApi = require("../api_modules/covidapi");
 import styles from "./styles";
 
-export default class Deaths extends Component
+export default class Total extends Component
 {
     constructor(props)
     {
         super(props);
         this.state = {
-            deaths : "0"
+            recovered : "0"
         };
     }
 
@@ -18,9 +18,9 @@ export default class Deaths extends Component
     {
         (
             async ()=> {
-                await covidApi.getTotalDeaths()
+                await covidApi.getTotalRecovered()
                 .then((data)=> {
-                    this.setState({deaths : data});
+                    this.setState({recovered : data});
                 });
             }
         )();
@@ -28,16 +28,15 @@ export default class Deaths extends Component
 
     render()
     {
-        return(
+        return (
             <View style={styles.container}>
                 <Text style= {styles.titleStyle}>
-                    Deaths{"\n"}
+                    Recovered{"\n"}
                 </Text>
                 <Text style={styles.numberStyle}>
-                    {this.state.deaths}
+                    {this.state.recovered}
                 </Text>
             </View>
         );
     }
-    
 }
