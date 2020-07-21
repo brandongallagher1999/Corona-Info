@@ -31,7 +31,7 @@ export default class Deaths extends Component
         return(
             <View style={styles.container}>
                 <Text style= {styles.titleStyle}>
-                    Deaths{"\n"}
+                    Deaths
                 </Text>
                 <Text style={styles.numberStyle}>
                     {this.state.deaths}

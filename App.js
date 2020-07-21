@@ -6,6 +6,8 @@ import Total from "./react_modules/Total";
 import Recovered from "./react_modules/Recovered";
 const covidApi = require("./api_modules/covidapi");
 
+import styles from "./react_modules/styles";
+
 
 export default class App extends Component {
 

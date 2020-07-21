@@ -31,7 +31,7 @@ export default class Total extends Component
         return (
             <View style={styles.container}>
                 <Text style= {styles.titleStyle}>
-                    Recovered{"\n"}
+                    Recovered
                 </Text>
                 <Text style={styles.numberStyle}>
                     {this.state.recovered}

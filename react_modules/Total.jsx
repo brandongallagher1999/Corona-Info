@@ -31,7 +31,7 @@ export default class Total extends Component
         return (
             <View style={styles.container}>
                 <Text style= {styles.titleStyle}>
-                    COVID-19 Cases{"\n"}
+                    COVID-19 Cases
                 </Text>
                 <Text style={styles.numberStyle}>
                     {this.state.totalCases}
