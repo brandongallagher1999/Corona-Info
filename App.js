@@ -6,7 +6,8 @@ import Total from "./react_modules/Total";
 import Recovered from "./react_modules/Recovered";
 const covidApi = require("./api_modules/covidapi");
 
-import styles from "./react_modules/styles";
+
+import CountryTable from "./react_modules/CountryTable";
 
 
 export default class App extends Component {
@@ -29,6 +30,7 @@ export default class App extends Component {
         <Total></Total>
         <Deaths></Deaths>
         <Recovered></Recovered>
+        <CountryTable></CountryTable>
       </ScrollView>
       
     );
