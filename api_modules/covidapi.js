@@ -1,5 +1,21 @@
 const fetch = require("node-fetch");
 
+const getCountryData = async () =>
+{
+    let obj = await fetch("https://disease.sh/v3/covid-19/countries", {
+        "headers": {
+            "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+            "accept-language": "en-US,en;q=0.9",
+            "x-requested-with": "XMLHttpRequest",
+          },
+          "method": "GET",
+        "mode": "cors"
+    })
+    .then(res => (res.text()))
+    .then(data => (JSON.parse(data)));
+    return await Promise.resolve(obj);
+}
+
 const getAllData = async () =>
 {
     let obj = await fetch("https://disease.sh/v3/covid-19/all", {
@@ -81,5 +97,6 @@ module.exports = {
     getAllData,
     getTotalCases,
     getTotalDeaths,
-    getTotalRecovered
+    getTotalRecovered,
+    getCountryData
 };

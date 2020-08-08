@@ -19,7 +19,14 @@ const styles = StyleSheet.create({
         position : "relative",
         top : "45px"
     },
-  
+    dataRow : {
+        fontWeight : "bold",
+        fontSize : "20px"
+    },
+    tinyLogo: {
+        width: 100,
+        height: 50,
+    },
     container: {
         flex: 1,
         paddingBottom : "125px",

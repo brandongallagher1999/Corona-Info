@@ -14,14 +14,13 @@ export default class App extends Component {
 
   async display()
   {
-    let data = await covidApi.getAllData();
-    console.log(data);
-    return JSON.parse(data);
+    //let data = await covidApi.getCountryData();
+    //console.log(data);
   }
 
   componentDidMount()
   {
-
+    this.display();
   }
   render()
   {
