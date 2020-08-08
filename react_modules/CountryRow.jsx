@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {DataTable} from "react-native-paper";
-import {Text, Image} from "react-native";
+import {View, Text, Image} from "react-native";
 import styles from "./styles";
 export default class CountryRow extends Component
 {
@@ -11,7 +11,8 @@ export default class CountryRow extends Component
     render()
     {
         return(
-            <DataTable.Row>
+            <View>
+                <DataTable.Row>
                 <DataTable.Cell> <Text style={styles.dataRow}>{this.props.country}</Text> </DataTable.Cell>
                 <DataTable.Cell> <Text style={styles.dataRow}>{this.props.cases}</Text> </DataTable.Cell>
                 <DataTable.Cell> <Text style={styles.dataRow}>{this.props.todayCases}</Text> </DataTable.Cell>
@@ -24,6 +25,8 @@ export default class CountryRow extends Component
                     <Image style={styles.tinyLogo} source={this.props.flag}></Image>
                 </DataTable.Cell>
             </DataTable.Row>
+            </View>
+            
         )
     }
 }

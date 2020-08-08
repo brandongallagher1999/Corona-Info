@@ -21,7 +21,11 @@ const styles = StyleSheet.create({
     },
     dataRow : {
         fontWeight : "bold",
-        fontSize : "20px"
+        fontSize : "20px",
+        width: "10px",
+        flex: 1,
+        flexWrap: "wrap",
+        flexDirection: "row"
     },
     tinyLogo: {
         width: 100,
