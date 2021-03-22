@@ -8,7 +8,7 @@
     "eject": "expo eject"
   },
   "dependencies": {
-    "expo": "~38.0.8",
+    "expo": "~40.0.1",
     "node-fetch": "^2.6.0",
     "npm-check-updates": "^7.0.2",
     "react": "~16.13.1",
