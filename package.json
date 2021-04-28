@@ -18,7 +18,7 @@
     "react-native-paper": "^4.0.1",
     "react-native-tableview": "^3.0.0",
     "react-native-tableview-simple": "^4.1.0",
-    "react-native-web": "~0.15.0"
+    "react-native-web": "~0.16.1"
   },
   "devDependencies": {
     "babel-preset-expo": "~8.3.0",
