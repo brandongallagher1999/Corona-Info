@@ -21,7 +21,7 @@
     "react-native-web": "~0.17.0"
   },
   "devDependencies": {
-    "babel-preset-expo": "~8.4.0",
+    "babel-preset-expo": "~8.5.1",
     "@babel/core": "^7.10.5"
   },
   "private": true
