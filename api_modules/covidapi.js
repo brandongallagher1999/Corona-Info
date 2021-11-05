@@ -1,102 +1,86 @@
 const fetch = require("node-fetch");
 
-const getCountryData = async () =>
-{
-    let obj = await fetch("https://disease.sh/v3/covid-19/countries", {
-        "headers": {
-            "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
-            "accept-language": "en-US,en;q=0.9",
-            "x-requested-with": "XMLHttpRequest",
-          },
-          "method": "GET",
-        "mode": "cors"
-    })
-    .then(res => (res.text()))
-    .then(data => (JSON.parse(data)));
-    return await Promise.resolve(obj);
-}
+const getCountryData = async () => {
+  let resp = await fetch("https://disease.sh/v3/covid-19/countries", {
+    headers: {
+      accept:
+        "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "accept-language": "en-US,en;q=0.9",
+      "x-requested-with": "XMLHttpRequest",
+    },
+    method: "GET",
+    mode: "cors",
+  });
 
-const getAllData = async () =>
-{
-    let obj = await fetch("https://disease.sh/v3/covid-19/all", {
-        "headers": {
-            "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
-            "accept-language": "en-US,en;q=0.9",
-            "x-requested-with": "XMLHttpRequest",
-          },
-          "method": "GET",
-        "mode": "cors"
-    })
-    .then(res => {return res.text();})
-    .then(data => {
-        return data;
-    });
-    return await Promise.resolve(obj);
-}
+  return JSON.parse(resp.text().data);
+};
 
-const getTotalRecovered = async () =>
-{
-    let obj = await fetch("https://disease.sh/v3/covid-19/all", {
-        "headers": {
-            "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
-            "accept-language": "en-US,en;q=0.9",
-            "x-requested-with": "XMLHttpRequest",
-          },
-          "method": "GET",
-        "mode": "cors"
-    })
-    .then(res => {return res.text();})
-    .then(data => {
-        let json = JSON.parse(data);
-        return json.recovered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); // return formatted with commas
-    });
-    return await Promise.resolve(obj);
-}
+const getAllData = async () => {
+  let resp = await fetch("https://disease.sh/v3/covid-19/all", {
+    headers: {
+      accept:
+        "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "accept-language": "en-US,en;q=0.9",
+      "x-requested-with": "XMLHttpRequest",
+    },
+    method: "GET",
+    mode: "cors",
+  });
 
-const getTotalDeaths = async () =>
-{
-    let obj = await fetch("https://disease.sh/v3/covid-19/all", {
-        "headers": {
-            "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
-            "accept-language": "en-US,en;q=0.9",
-            "x-requested-with": "XMLHttpRequest",
-          },
-          "method": "GET",
-        "mode": "cors"
-    })
-    .then(res => {return res.text();})
-    .then(data => {
-        let json = JSON.parse(data);
-        return json.deaths.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); // return formatted with commas
-    });
-    return await Promise.resolve(obj);
-}
+  return JSON.parse(resp.text().data);
+};
 
-const getTotalCases = async () =>
-{
-    let obj = await fetch("https://disease.sh/v3/covid-19/all", {
-        "headers": {
-            "accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
-            "accept-language": "en-US,en;q=0.9",
-            "x-requested-with": "XMLHttpRequest",
-          },
-          "method": "GET",
-        "mode": "cors"
-    })
-    .then(res => {return res.text();})
-    .then(data => {
-        let json = JSON.parse(data);
-        return json.cases.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); // return formatted with commas
-    });
-    return await Promise.resolve(obj);
-}
+const getTotalRecovered = async () => {
+  let resp = await fetch("https://disease.sh/v3/covid-19/all", {
+    headers: {
+      accept:
+        "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "accept-language": "en-US,en;q=0.9",
+      "x-requested-with": "XMLHttpRequest",
+    },
+    method: "GET",
+    mode: "cors",
+  });
+  const json = JSON.parse(resp.text().data);
+  return json.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
+const getTotalDeaths = async () => {
+  let resp = await fetch("https://disease.sh/v3/covid-19/all", {
+    headers: {
+      accept:
+        "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "accept-language": "en-US,en;q=0.9",
+      "x-requested-with": "XMLHttpRequest",
+    },
+    method: "GET",
+    mode: "cors",
+  });
 
+  const json = JSON.parse(resp.text().data);
+  return json.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
+
+const getTotalCases = async () => {
+  let resp = await fetch("https://disease.sh/v3/covid-19/all", {
+    headers: {
+      accept:
+        "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript, */*; q=0.01",
+      "accept-language": "en-US,en;q=0.9",
+      "x-requested-with": "XMLHttpRequest",
+    },
+    method: "GET",
+    mode: "cors",
+  });
+
+  const json = JSON.parse(resp.text().data);
+  return json.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+};
 
 module.exports = {
-    getAllData,
-    getTotalCases,
-    getTotalDeaths,
-    getTotalRecovered,
-    getCountryData
+  getAllData,
+  getTotalCases,
+  getTotalDeaths,
+  getTotalRecovered,
+  getCountryData,
 };

@@ -1,10 +1,8 @@
-
-
 services:
-    app:
-        build:
-            context: "."
-            dockerfile: "Dockerfile"
-        ports:
-            - "19002:19002"
-            - "19006:19006"
+  app:
+    build:
+      context: "."
+      dockerfile: "Dockerfile"
+    ports:
+      - "19002:19002"
+      - "19006:19006"

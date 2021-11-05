@@ -1,14 +1,14 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-  open-pull-requests-limit: 99
-  ignore:
-  - dependency-name: react-native-web
-    versions:
-    - 0.16.0
-  - dependency-name: react-native
-    versions:
-    - 0.64.0
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+    open-pull-requests-limit: 99
+    ignore:
+      - dependency-name: react-native-web
+        versions:
+          - 0.16.0
+      - dependency-name: react-native
+        versions:
+          - 0.64.0
