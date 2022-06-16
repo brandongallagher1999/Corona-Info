@@ -23,7 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.18.5",
     "babel-preset-expo": "~9.1.0",
-    "prettier": "2.7.0"
+    "prettier": "2.7.1"
   },
   "private": true
 }
