@@ -15,7 +15,7 @@
     "react-dom": "~17.0.2",
     "react-native": "^0.68.2",
     "react-native-elements": "^3.3.2",
-    "react-native-paper": "^4.12.1",
+    "react-native-paper": "^4.12.4",
     "react-native-tableview": "^3.0.0",
     "react-native-tableview-simple": "^4.3.1",
     "react-native-web": "~0.18.1"
