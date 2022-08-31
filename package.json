@@ -18,7 +18,7 @@
     "react-native-paper": "^4.12.1",
     "react-native-tableview": "^3.0.0",
     "react-native-tableview-simple": "^4.3.1",
-    "react-native-web": "~0.18.1"
+    "react-native-web": "~0.18.9"
   },
   "devDependencies": {
     "@babel/core": "^7.18.5",
