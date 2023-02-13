@@ -6684,10 +6684,10 @@ react-native-size-matters@^0.3.1:
   resolved "https://registry.yarnpkg.com/react-native-size-matters/-/react-native-size-matters-0.3.1.tgz#24d0cfc335a2c730f6d58bd7b43ea5a41be4b49f"
   integrity sha512-mKOfBLIBFBcs9br1rlZDvxD5+mAl8Gfr5CounwJtxI6Z82rGrMO+Kgl9EIg3RMVf3G855a85YVqHJL2f5EDRlw==
 
-react-native-tableview-simple@^4.3.1:
-  version "4.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-tableview-simple/-/react-native-tableview-simple-4.3.1.tgz#0269541a76e61ef3ff72b71787aa20290175fb5a"
-  integrity sha512-yegMqYR6y79IxfBBosqzZ/B3Ck6Q5piGcUdWqOb4ddOFoMZ1kH/0kjv8O8YTVmKX8ErYhTVNP9C7AFslTkApAw==
+react-native-tableview-simple@^4.4.0:
+  version "4.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-tableview-simple/-/react-native-tableview-simple-4.4.0.tgz#7318145e9b27934fec8cd41b2a06d773c65d74d7"
+  integrity sha512-b31+2zHrB4ymv/g+iKQRjkVA1qNfVAroRG0z6qDeV1AxL221FUP9Q3XAZrju1sGuJdY4y4JADP0E2fRJwDuBWQ==
 
 react-native-tableview@^3.0.0:
   version "3.1.0"
